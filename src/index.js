@@ -16,7 +16,7 @@ app.get('/newFeeds', async (req, res) => {
 const sanitize = (value, defaultValue) => {
     if(value === null || value === undefined || isNaN(Number(value)))
         return defaultValue;
-    return value;    
+    return Number(value);    
 }
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
